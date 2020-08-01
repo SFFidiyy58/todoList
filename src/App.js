@@ -13,7 +13,9 @@ class App extends Component {
 
   componentDidMount(){
     const context = this
-    this.setState({isLoading: true}, () => axios
+
+    this.setState({isLoading: true}, () =>
+    axios
     .get("https://obscure-journey-62906.herokuapp.com/todos")
     .then(res =>
       context.setState({
